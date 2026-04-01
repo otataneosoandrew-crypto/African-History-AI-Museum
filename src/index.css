@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-museum-bg: #fdfcf8;
+  --color-museum-ink: #1a1a1a;
+  --color-museum-accent: #8b4513; /* SaddleBrown */
+  --color-museum-gold: #c5a059;
+}
+
+@layer base {
+  body {
+    @apply bg-museum-bg text-museum-ink font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
+}
+
+.museum-card {
+  @apply bg-white border border-museum-ink/5 rounded-2xl p-6 transition-all hover:shadow-xl hover:-translate-y-1;
+}
+
+.btn-primary {
+  @apply bg-museum-ink text-white px-6 py-3 rounded-full font-medium transition-all hover:bg-museum-accent active:scale-95 disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply border border-museum-ink/20 px-6 py-3 rounded-full font-medium transition-all hover:bg-museum-ink/5 active:scale-95;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-museum-bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-museum-ink/10 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-museum-ink/20;
+}

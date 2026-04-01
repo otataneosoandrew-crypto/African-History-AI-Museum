@@ -1,0 +1,5 @@
+{
+  "name": "Heritage: African History AI Museum",
+  "description": "An immersive AI-powered museum exploring African history from pre-colonial eras to the present day, featuring AI-generated podcasts, songs, poems, videos, and storybooks.",
+  "requestFramePermissions": ["camera", "microphone"]
+}
